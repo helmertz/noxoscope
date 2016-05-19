@@ -1,0 +1,26 @@
+# Build files
+/build*
+create_assets_link.bat
+
+# Model
+*.blend1
+
+# Doxygen
+doc
+
+# Clion
+.idea
+
+# CMake
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
