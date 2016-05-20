@@ -15,6 +15,6 @@ void main()
 	mat4 modelViewMatrix = viewMatrix * modelMatrix;
 	mat4 modelViewProjectionMatrix = projMatrix * modelViewMatrix;
 	vsPosition = (viewMatrix * modelMatrix * position).xyz;
-    texCoord = texCoordIn;
-    gl_Position = projMatrix * viewMatrix * modelMatrix * position;
+	texCoord = texCoordIn;
+	gl_Position = projMatrix * viewMatrix * modelMatrix * position;
 }

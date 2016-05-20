@@ -31,7 +31,7 @@ void main()
 	vec3 tangent = normalize(rvec - normal * dot(rvec, normal) );
 	vec3 bitangent = cross(normal, tangent);
 	mat3 tbn = mat3(tangent, bitangent, normal);
-    float radius = 0.3;
+	float radius = 0.3;
 
 	float occlusion = 0.0;
 	for (int i = 0; i < kernelSize; i++) {

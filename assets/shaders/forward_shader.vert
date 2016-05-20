@@ -25,6 +25,6 @@ void main()
 	viewSpaceTangent = vec3(normalize((normalMatrix * vec4(tangentIn,0.0)).xyz));
 	viewSpaceBitangent = vec3(normalize((normalMatrix * vec4(bitangentIn,0.0)).xyz));
 	vsPosition = (viewMatrix * modelMatrix * position).xyz;
-    texCoord = texCoordIn;
-    gl_Position = projMatrix * viewMatrix * modelMatrix * position;
+	texCoord = texCoordIn;
+	gl_Position = projMatrix * viewMatrix * modelMatrix * position;
 }
