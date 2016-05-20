@@ -73,7 +73,7 @@ void Noxoscope::run() {
 		update(frameDiff);
 
 		if (showGui) {
-			ImGui_ImplSdlGL3_NewFrame();
+			ImGui_ImplSdlGL3_NewFrame(mainwindow);
 		}
 
 		auto secsNow = chrono::duration_cast<chrono::seconds>(now - startTime);
@@ -347,6 +347,7 @@ void Noxoscope::setupImgui() {
 	style.Colors[ImGuiCol_TextDisabled] = ImVec4(0.60f, 0.60f, 0.60f, 1.00f);
 	style.Colors[ImGuiCol_WindowBg] = ImVec4(0.94f, 0.94f, 0.94f, 1.00f);
 	style.Colors[ImGuiCol_ChildWindowBg] = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
+	style.Colors[ImGuiCol_PopupBg] = ImVec4(0.94f, 0.94f, 0.94f, 1.00f);
 	style.Colors[ImGuiCol_Border] = ImVec4(0.00f, 0.00f, 0.00f, 0.39f);
 	style.Colors[ImGuiCol_BorderShadow] = ImVec4(1.00f, 1.00f, 1.00f, 0.10f);
 	style.Colors[ImGuiCol_FrameBg] = ImVec4(1.00f, 1.00f, 0.99f, 1.00f);
@@ -384,10 +385,8 @@ void Noxoscope::setupImgui() {
 	style.Colors[ImGuiCol_PlotHistogram] = ImVec4(0.90f, 0.70f, 0.00f, 1.00f);
 	style.Colors[ImGuiCol_PlotHistogramHovered] = ImVec4(1.00f, 0.60f, 0.00f, 1.00f);
 	style.Colors[ImGuiCol_TextSelectedBg] = ImVec4(0.26f, 0.59f, 0.98f, 0.35f);
-	style.Colors[ImGuiCol_TooltipBg] = ImVec4(1.00f, 1.00f, 1.00f, 0.94f);
 	style.Colors[ImGuiCol_ModalWindowDarkening] = ImVec4(0.20f, 0.20f, 0.20f, 0.35f);
 
-	style.WindowFillAlphaDefault = 1.0f;
 	style.Alpha = 1.0f;
 	style.AntiAliasedShapes = true;
 	style.AntiAliasedLines = true;
